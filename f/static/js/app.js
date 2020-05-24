@@ -1,11 +1,7 @@
 // init function to return the page loaded with essential data before 
 // hitting dropdown menu 
 function init () {    
-<<<<<<< HEAD:f/static/js/app.js
   d3.json("f/data/samples.json").then((data)=> {
-=======
-  d3.json("./data/samples.json").then((data)=> {
->>>>>>> 8fc10037e6745b52c4a5ca5d184613c8b92c10ad:static/js/app.js
       console.log(data);
       var names = ((data.names)).slice(0,10);
       var n = names.slice(0,10);
@@ -201,11 +197,7 @@ function update(){
 }
 
 function metaDemo(select){
-<<<<<<< HEAD:f/static/js/app.js
   d3.json("f/data/samples.json").then((data)=> {
-=======
-  d3.json("./data/samples.json").then((data)=> {
->>>>>>> 8fc10037e6745b52c4a5ca5d184613c8b92c10ad:static/js/app.js
       var metaSelect = (data.metadata).filter(item => item.id==select);
       console.log(metaSelect)
       var sortMeta = metaSelect.sort((a, b) => (a.id) - (b.id));
@@ -222,11 +214,7 @@ function metaDemo(select){
   })
 }
 function hBar(select) {
-<<<<<<< HEAD:f/static/js/app.js
   d3.json("f/data/samples.json").then((data)=>{
-=======
-  d3.json("data/samples.json").then((data)=>{
->>>>>>> 8fc10037e6745b52c4a5ca5d184613c8b92c10ad:static/js/app.js
       var barselect = (data.samples).filter(item => item.id==select);
       var otuids = (barselect.map(item => item.otu_ids)); 
       var otuids10 = otuids[0].slice(0,10);
@@ -257,11 +245,7 @@ function hBar(select) {
   })
 }
 function bub(select) {
-<<<<<<< HEAD:f/static/js/app.js
   d3.json("f/data/samples.json").then((data)=>{
-=======
-  d3.json("./data/samples.json").then((data)=>{
->>>>>>> 8fc10037e6745b52c4a5ca5d184613c8b92c10ad:static/js/app.js
       var bubselect = (data.samples).filter(item => item.id==select);
       var otuids = (bubselect.map(item => item.otu_ids)); 
       var otuids10 = otuids[0].slice(0,10);
