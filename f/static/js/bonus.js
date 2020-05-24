@@ -1,5 +1,5 @@
 function gauge(select){
-    d3.json("../data/samples.json").then((data)=>{
+    d3.json("f/data/samples.json").then((data)=>{
         var gselect = (data.metadata).filter(item => item.id==select);
         var wfreq = gselect.map(item => item.wfreq);
         console.log(wfreq[0])
