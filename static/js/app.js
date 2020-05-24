@@ -1,7 +1,7 @@
 // init function to return the page loaded with essential data before 
 // hitting dropdown menu 
 function init () {    
-  d3.json("..data/samples.json").then((data)=> {
+  d3.json("data/samples.json").then((data)=> {
       console.log(data);
       var names = ((data.names)).slice(0,10);
       var n = names.slice(0,10);
@@ -197,7 +197,7 @@ function update(){
 }
 
 function metaDemo(select){
-  d3.json("..data/samples.json").then((data)=> {
+  d3.json("data/samples.json").then((data)=> {
       var metaSelect = (data.metadata).filter(item => item.id==select);
       console.log(metaSelect)
       var sortMeta = metaSelect.sort((a, b) => (a.id) - (b.id));
@@ -214,7 +214,7 @@ function metaDemo(select){
   })
 }
 function hBar(select) {
-  d3.json("..data/samples.json").then((data)=>{
+  d3.json("data/samples.json").then((data)=>{
       var barselect = (data.samples).filter(item => item.id==select);
       var otuids = (barselect.map(item => item.otu_ids)); 
       var otuids10 = otuids[0].slice(0,10);
@@ -245,7 +245,7 @@ function hBar(select) {
   })
 }
 function bub(select) {
-  d3.json("..data/samples.json").then((data)=>{
+  d3.json("data/samples.json").then((data)=>{
       var bubselect = (data.samples).filter(item => item.id==select);
       var otuids = (bubselect.map(item => item.otu_ids)); 
       var otuids10 = otuids[0].slice(0,10);
