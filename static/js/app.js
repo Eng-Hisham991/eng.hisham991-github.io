@@ -197,7 +197,7 @@ function update(){
 }
 
 function metaDemo(select){
-  d3.json("samples.json").then((data)=> {
+  d3.json("../data/samples.json").then((data)=> {
       var metaSelect = (data.metadata).filter(item => item.id==select);
       console.log(metaSelect)
       var sortMeta = metaSelect.sort((a, b) => (a.id) - (b.id));
