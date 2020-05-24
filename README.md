@@ -9,7 +9,7 @@
 - The idea of this project is :
   - create an init function which provides basic output in terms of rendering the web 
     page with charts of horizontal bar chart, guage chart, bubble chart, dropdown menu
-    which contains the ids of people's data and metdata information.
+    which contains the top 10 ids of people's data and metdata information.
     Inside the init function the following defined:
      - d3.json to get the data from the samples.json file.
      - get the required data from the objects inside the mentioned file.
