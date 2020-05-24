@@ -1,7 +1,7 @@
 // init function to return the page loaded with essential data before 
 // hitting dropdown menu 
 function init () {    
-  d3.json("./data/samples.json").then((data)=> {
+  d3.json("../data/samples.json").then((data)=> {
       console.log(data);
       var names = ((data.names)).slice(0,10);
       var n = names.slice(0,10);
